@@ -7,7 +7,7 @@ Introduction goes here.
 1. Add this extension to your Gemfile with this line:
 
     ```ruby
-    gem 'spree_graphql_base', github: '[your-github-handle]/spree_graphql_base'
+    gem 'spree_graphql_base', github: 'truemarkDev/spree_graphql_base'
     ```
 
 2. Install the gem using Bundler
@@ -48,4 +48,4 @@ If you'd like to contribute, please take a look at the
 [instructions](CONTRIBUTING.md) for installing dependencies and crafting a good
 pull request.
 
-Copyright (c) 2020 [name of extension creator], released under the New BSD License
+Copyright (c) 2020 Truemark Technology, released under the New BSD License
