@@ -27,7 +27,8 @@ Gem::Specification.new do |s|
   s.add_dependency 'spree_backend', spree_version
   s.add_dependency 'spree_extension'
   s.add_dependency 'graphql'
+  s.add_dependency 'graphiql-rails'
 
   s.add_development_dependency 'spree_dev_tools'
-  s.add_development_dependency 'graphiql-rails'
+  # s.add_development_dependency 'graphiql-rails'
 end
