@@ -15,6 +15,14 @@ module Spree
         end
       end
 
+      def by_slug(object, arguments, context)
+        if authorize?(:read, ::Spree::Product)
+          Spree::Product.find_by(slug: arguments[:slug])
+        else
+          Spree::Product.none
+        end
+      end
+
       private
 
       # @return ::Spree::Shared::Paginate

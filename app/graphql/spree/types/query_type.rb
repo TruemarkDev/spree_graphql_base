@@ -15,6 +15,10 @@ module Spree
         argument :page, Integer, required: false
       end
 
+      field :product, ProductType, 'Return a product detail by slug',{null: false, resolve: Resolvers::Product[:by_slug]}do
+        argument :slug, String, required: true
+      end
+
       # You can only see the details on a `Friendship`
       # if you're one of the people involved in it.
     end
