@@ -29,6 +29,7 @@ module Spree
       field :completed_at, ::GraphQL::Types::ISO8601DateTime, null: false
       field :created_at, ::GraphQL::Types::ISO8601DateTime, null: false
       field :updated_at, ::GraphQL::Types::ISO8601DateTime, null: false
+      field :line_items, [Types::LineItemType], null: false
 
       # You can only see the details on a `Friendship`
       # if you're one of the people involved in it.

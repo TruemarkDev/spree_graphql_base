@@ -21,6 +21,11 @@ module Spree
 
       # You can only see the details on a `Friendship`
       # if you're one of the people involved in it.
+
+      field :order, Spree::Types::OrderType, 'Return a order detail by order number',{null: false, resolve: Resolvers::Order[:by_number]}do
+        argument :number, String, required: true
+      end
+
     end
   end
 end

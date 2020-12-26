@@ -17,8 +17,19 @@ module Spree
         spree_current_order
       end
 
+      def by_number(object, arguments, context)
+        if authorize?(:read, ::Spree::Order)
+          scope.find_by(number: arguments[:number])
+        else
+          scope.none
+        end
+      end
 
       private
+
+      def scope
+        Spree::Order
+      end
 
       # @return ::Spree::Shared::Paginate
       def collection_paginator
