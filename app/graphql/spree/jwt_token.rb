@@ -8,7 +8,7 @@ module Spree
       payload = { spree_user_id: user.id }
       payload[:exp] = time.to_i
       token = JWT.encode(payload, Spree::Graphql::Config[:graphql_secret_key])
-      { token: token, exp: time.strftime("%m-%d-%Y %H:%M"), login: user.login }
+      { token: token, exp: time.strftime("%m-%d-%Y %H:%M"), login: user.login, roles: user.spree_roles }
     end
 
     def self.create_for_order(order)
