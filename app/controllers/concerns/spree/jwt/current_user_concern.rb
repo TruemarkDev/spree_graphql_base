@@ -4,7 +4,7 @@ module Spree
       def spree_current_user
         @spree_current_user ||= begin
           if params[:email].present? && params[:password].present?
-            user = ::Spree.user_class.find(email: params[:email])
+            user = ::Spree.user_class.find_by(email: params[:email])
             if user.respond_to?(:valid_password?) && user.valid_password?(params[:password])
               return user
             else
