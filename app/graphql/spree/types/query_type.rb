@@ -15,17 +15,16 @@ module Spree
         argument :page, Integer, required: false
       end
 
-      field :product, ProductType, 'Return a product detail by slug',{null: false, resolve: Resolvers::Product[:by_slug]}do
+      field :product, ProductType, 'Return a product detail by slug', { null: false, resolve: Resolvers::Product[:by_slug] } do
         argument :slug, String, required: true
       end
 
-      # You can only see the details on a `Friendship`
-      # if you're one of the people involved in it.
-
-      field :order, Spree::Types::OrderType, 'Return a order detail by order number',{null: false, resolve: Resolvers::Order[:by_number]}do
+      field :order, Spree::Types::OrderType, 'Return a order detail by order number', { null: false, resolve: Resolvers::Order[:by_number] } do
         argument :number, String, required: true
       end
 
+      # Spree storefront dashboard (customer account data)
+      field :my_orders, Spree::Types::OrderType, 'Return all orders by current user', { null: false, resolve: Resolvers::Order[:account] }
     end
   end
 end

@@ -13,9 +13,6 @@ module Spree
     field :meta_keywords, String, null: false
     field :updated_at, ::GraphQL::Types::ISO8601DateTime, null: false
 
-
-
-
     # You can only see the details on a `Friendship`
     # if you're one of the people involved in it.
     def self.authorized?(object, context)

@@ -25,6 +25,14 @@ module Spree
         end
       end
 
+      def account
+        if authorize?(:read, ::Spree::Order)
+          collection_finder.new(user: spree_current_user).execute
+        else
+          scope.none
+        end
+      end
+
       private
 
       def scope

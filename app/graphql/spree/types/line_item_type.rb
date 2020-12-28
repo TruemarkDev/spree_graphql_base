@@ -8,14 +8,8 @@ module Spree
     field :price, ::Spree::Types::Money, null: false
     field :currency, String, null: false
     field :display_price, String, null: false
-    field :available_on, String, null: false
-    field :slug, String, null: false
-    field :meta_description, String, null: false
-    field :meta_keywords, String, null: false
     field :updated_at, ::GraphQL::Types::ISO8601DateTime, null: false
-
-
-
+    field :variant, Types::VariantType, null: false
 
     # You can only see the details on a `Friendship`
     # if you're one of the people involved in it.
