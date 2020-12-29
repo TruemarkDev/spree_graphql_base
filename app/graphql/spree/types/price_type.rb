@@ -1,13 +1,5 @@
 module Spree
   class Types::PriceType < ::GraphQL::Schema::Object
-    field :amount, String, null: false
-    field :country_iso, String, null: true
-    field :created_at, GraphQL::Types::ISO8601DateTime, null: true
-    field :currency, Currency, null: false
-    field :display_amount, String, null: false
-    field :display_country, String, null: false
-    field :updated_at, GraphQL::Types::ISO8601DateTime, null: true
-
     field :id, ID, null: false
     field :variant_id, Integer, null: false
     field :amount, Float, null: false
