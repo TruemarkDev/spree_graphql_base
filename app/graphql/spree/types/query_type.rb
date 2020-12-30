@@ -19,6 +19,8 @@ module Spree
         argument :slug, String, required: true
       end
 
+      field :prototypes, [PrototypeType], 'Return all available prototypes for user (admin vs vendor)', { null: false, resolve: Resolvers::Prototype[:all] }
+
       field :order, Spree::Types::OrderType, 'Return a order detail by order number', { null: false, resolve: Resolvers::Order[:by_number] } do
         argument :number, String, required: true
       end

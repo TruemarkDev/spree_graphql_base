@@ -1,6 +1,12 @@
 module Spree
   module Mutations
     class BaseMutation < ::GraphQL::Schema::Mutation
+      null true
+
+      argument_class GraphQL::Schema::Argument
+      # field_class Types::BaseField
+      # input_object_class Types::BaseInputObject
+      # object_class Types::BaseObject
 
       def resolve
         return action if authorize?
