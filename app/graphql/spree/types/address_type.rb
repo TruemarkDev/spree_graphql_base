@@ -11,7 +11,7 @@ module Spree
     field :phone, String, null: false
     field :state_name, String, null: false
     field :alternative_phone, String, null: false
-    field :company, String, null: false
+    field :company, String, null: true
     field :state, Types::StateType, null: false
     field :country, Types::CountryType, null: false
     field :updated_at, ::GraphQL::Types::ISO8601DateTime, null: false

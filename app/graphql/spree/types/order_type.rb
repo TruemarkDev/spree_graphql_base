@@ -30,6 +30,9 @@ module Spree
       field :created_at, ::GraphQL::Types::ISO8601DateTime, null: false
       field :updated_at, ::GraphQL::Types::ISO8601DateTime, null: false
       field :line_items, [Types::LineItemType], null: false
+      field :state_changes, [Types::StateChangeType], null: false
+      field :billing_address, Types::AddressType, null: false
+      field :shipping_address, Types::AddressType, null: false
 
       # You can only see the details on a `Friendship`
       # if you're one of the people involved in it.
