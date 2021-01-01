@@ -22,6 +22,7 @@ module Spree
       field :promo_total, Float, null: false
       field :ship_total, Float, null: false
       field :special_instructions, String, null: true
+      field :channel, String, null: false
       field :payment_state, String, null: true
       field :shipment_state, String, null: true
       field :state, String, null: false

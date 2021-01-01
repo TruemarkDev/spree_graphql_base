@@ -7,6 +7,7 @@ module Spree
     field :billing_address, Types::AddressType, null: false
     field :shipping_address, Types::AddressType, null: false
     field :addresses, [Types::AddressType], null: false
+    field :order_count, Integer, null: true
 
     # You can only see the details on a `Friendship`
     # if you're one of the people involved in it.
