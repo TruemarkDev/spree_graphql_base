@@ -35,7 +35,7 @@ module Spree
       field :state_changes, [Types::StateChangeType], null: false
       field :billing_address, Types::AddressType, null: false
       field :shipping_address, Types::AddressType, null: false
-      field :user, Types::UserType, null: false
+      field :user, Types::UserType, null: true
 
       # You can only see the details on a `Friendship`
       # if you're one of the people involved in it.
