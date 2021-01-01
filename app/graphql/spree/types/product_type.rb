@@ -3,6 +3,7 @@ module Spree
 
     field :id, ID, null: false
     field :name, String, null: false
+    field :sku, String, null: true
     field :description, String, null: false
     field :price, ::Spree::Types::Money, null: true
     field :currency, String, null: false

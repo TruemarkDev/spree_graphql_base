@@ -21,7 +21,9 @@ module Spree
       field :item_total, Float, null: false
       field :promo_total, Float, null: false
       field :ship_total, Float, null: false
-      field :special_instructions, String, null: false
+      field :special_instructions, String, null: true
+      field :payment_state, String, null: true
+      field :shipment_state, String, null: true
       field :state, String, null: false
       field :tax_total, Float, null: false
       field :token, String, null: false
@@ -33,6 +35,7 @@ module Spree
       field :state_changes, [Types::StateChangeType], null: false
       field :billing_address, Types::AddressType, null: false
       field :shipping_address, Types::AddressType, null: false
+      field :user, Types::UserType, null: false
 
       # You can only see the details on a `Friendship`
       # if you're one of the people involved in it.
